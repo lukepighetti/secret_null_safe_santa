@@ -73,11 +73,12 @@ void main(List<String> arguments) async {
   await tableFile.writeAsString(markdownTable);
 
   /// Save latest
-  final markdownFile = File('latest-packages.md');
+  final markdownFile = File('README.md');
   await markdownFile.create(recursive: true);
   await markdownFile.writeAsString([
-    '# ${results.length} Popular Unsafe Dart Packages',
-    '### Updated ${DateTime.now().formatPretty()}',
+    '# Secret Null Safe Santa',
+    '## ${results.length} packages found',
+    '#### Updated ${DateTime.now().formatPretty()}',
     '',
     markdownTable,
   ].join('\n'));
