@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:intl/intl.dart';
 import 'package:pub_api_client/pub_api_client.dart';
 import 'package:tabulate/tabulate.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 void main(List<String> arguments) async {
   final stopwatch = Stopwatch()..start();
@@ -36,6 +37,7 @@ void main(List<String> arguments) async {
           'package',
           'release version',
           'last version',
+          'last updated',
           'popularity',
           'likes',
         ];
@@ -44,6 +46,7 @@ void main(List<String> arguments) async {
           '[${package.package}](${info.url})',
           metrics.scorecard.packageVersion,
           info.versions.last.version,
+          timeago.format(info.latest.published),
           metrics.score.popularityScore.formatPercent(),
           metrics.score.likeCount.toString(),
         ]);
