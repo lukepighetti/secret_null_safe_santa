@@ -1,5 +1,5 @@
 # Secret Null Safe Santa 🎅
-## 100 popular packages
+## 100 popular unsafe packages
 #### Updated March 13, 2021
 
 |                                                                                            package | release version | last version |      last updated | popularity | likes |

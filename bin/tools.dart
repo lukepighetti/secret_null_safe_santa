@@ -80,7 +80,7 @@ void main(List<String> arguments) async {
     await file.create(recursive: true);
     await file.writeAsString([
       '# Secret Null Safe Santa 🎅',
-      '## ${results.length} popular packages',
+      '## ${results.length} popular unsafe packages',
       '#### Updated ${DateTime.now().formatPretty()}',
       '',
       markdownTable,
