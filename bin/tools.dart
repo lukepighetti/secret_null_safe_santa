@@ -22,6 +22,8 @@ void main(List<String> arguments) async {
     final searchResults = await client.search('', page: page);
 
     for (var package in searchResults.packages) {
+      if (results.length >= max) break;
+
       final info = await client.packageInfo(package.package);
       final metrics = await client.packageMetrics(package.package);
 
@@ -68,20 +70,19 @@ void main(List<String> arguments) async {
 
   /// Save table
   final markdownTable = table.wrapLinesWithPipes();
-  final tableFile = File('results/${DateTime.now().formatSimple()}.md');
-  await tableFile.create(recursive: true);
-  await tableFile.writeAsString(markdownTable);
+  final historyFile = File('history/${DateTime.now().formatSimple()}.md');
+  final latestFile = File('README.md');
 
-  /// Save latest
-  final markdownFile = File('README.md');
-  await markdownFile.create(recursive: true);
-  await markdownFile.writeAsString([
-    '# Secret Null Safe Santa',
-    '## ${results.length} packages found',
-    '#### Updated ${DateTime.now().formatPretty()}',
-    '',
-    markdownTable,
-  ].join('\n'));
+  for (var file in [historyFile, latestFile]) {
+    await file.create(recursive: true);
+    await file.writeAsString([
+      '# Secret Null Safe Santa',
+      '## ${results.length} popular packages',
+      '#### Updated ${DateTime.now().formatPretty()}',
+      '',
+      markdownTable,
+    ].join('\n'));
+  }
 }
 
 enum NullSafety { release, prerelease, none }

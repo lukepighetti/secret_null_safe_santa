@@ -1,5 +1,5 @@
 # Secret Null Safe Santa
-## 103 packages found
+## 100 popular packages
 #### Updated March 12, 2021
 
 |                                                                                            package | release version | last version | popularity | likes |
@@ -104,6 +104,3 @@
 |                                  [flutter_search_bar](https://pub.dev/packages/flutter_search_bar) |           2.1.0 |        2.1.0 |        94% |    43 |
 |                                            [either_option](https://pub.dev/packages/either_option) |           1.0.6 |  2.0.1-dev.1 |        86% |    29 |
 |                            [concentric_transition](https://pub.dev/packages/concentric_transition) |           0.1.1 |        0.1.1 |        81% |   137 |
-|                                                    [uni_links](https://pub.dev/packages/uni_links) |           0.4.0 |        0.4.0 |        98% |   374 |
-|                                      [sliding_up_panel](https://pub.dev/packages/sliding_up_panel) |           1.0.2 |        1.0.2 |        98% |   856 |
-|                          [firebase_dynamic_links](https://pub.dev/packages/firebase_dynamic_links) |           0.8.0 |        0.8.0 |        98% |   227 |
