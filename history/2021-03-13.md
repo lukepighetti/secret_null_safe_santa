@@ -1,5 +1,5 @@
 # Secret Null Safe Santa 🎅
-## 100 popular unsafe packages
+## 100 popular unsafe [Dart](https://dart.dev) packages
 #### Updated March 13, 2021
 
 |                                                                                            package | release version | last version |      last updated | popularity | likes |
@@ -8,13 +8,12 @@
 |                                          [flutter_swiper](https://pub.dev/packages/flutter_swiper) |           1.1.6 |        1.1.6 |  about a year ago |        99% |  1106 |
 |                                        [pull_to_refresh](https://pub.dev/packages/pull_to_refresh) |           1.6.4 |        1.6.4 | about a month ago |        98% |   798 |
 |                                                          [badges](https://pub.dev/packages/badges) |           1.2.0 |        1.2.0 |        8 days ago |        98% |   667 |
-|                                                  [qr_flutter](https://pub.dev/packages/qr_flutter) |           3.2.0 |        3.2.0 |  about a year ago |        98% |   469 |
+|                                                  [qr_flutter](https://pub.dev/packages/qr_flutter) |           3.2.0 |        3.2.0 |  about a year ago |        98% |   470 |
 |                                                      [retrofit](https://pub.dev/packages/retrofit) |         1.3.4+1 |      1.3.4+1 |      5 months ago |        97% |   336 |
 |                    [syncfusion_flutter_charts](https://pub.dev/packages/syncfusion_flutter_charts) |         18.4.47 |      18.4.47 |        4 days ago |        97% |   704 |
 |                                            [flutter_redux](https://pub.dev/packages/flutter_redux) |           0.7.0 |        0.7.0 |      5 months ago |        97% |   229 |
 |                                          [awesome_dialog](https://pub.dev/packages/awesome_dialog) |           1.3.2 |        1.3.2 |       11 days ago |        96% |   363 |
 |                            [flutter_google_places](https://pub.dev/packages/flutter_google_places) |           0.2.8 |        0.2.8 |        9 days ago |        97% |   120 |
-|                              [responsive_framework](https://pub.dev/packages/responsive_framework) |          0.0.15 |       0.0.15 |       10 days ago |        95% |   588 |
 |                                                      [adobe_xd](https://pub.dev/packages/adobe_xd) |         1.1.0+1 |      1.1.0+1 | about a month ago |        96% |   194 |
 |                        [flutter_custom_clippers](https://pub.dev/packages/flutter_custom_clippers) |           1.1.2 |        1.1.2 |      6 months ago |        96% |   234 |
 |                [syncfusion_flutter_calendar](https://pub.dev/packages/syncfusion_flutter_calendar) |         18.4.47 |      18.4.47 |        4 days ago |        95% |   326 |
@@ -25,8 +24,8 @@
 |                                            [toggle_switch](https://pub.dev/packages/toggle_switch) |           0.1.8 |        0.1.8 |      7 months ago |        95% |   145 |
 |                          [syncfusion_flutter_pdf](https://pub.dev/packages/syncfusion_flutter_pdf) |    18.4.47-beta | 18.4.47-beta |        4 days ago |        95% |   150 |
 |                    [liquid_progress_indicator](https://pub.dev/packages/liquid_progress_indicator) |           0.3.2 |        0.3.2 |  about a year ago |        94% |   316 |
-|                                [flutter_chips_input](https://pub.dev/packages/flutter_chips_input) |           1.9.5 |        1.9.5 |      3 months ago |        97% |    48 |
 |                                                    [timelines](https://pub.dev/packages/timelines) |         0.0.2+1 |      0.0.2+1 |      4 months ago |        93% |   274 |
+|                                [flutter_chips_input](https://pub.dev/packages/flutter_chips_input) |           1.9.5 |        1.9.5 |      3 months ago |        97% |    48 |
 |                              [flutter_inner_drawer](https://pub.dev/packages/flutter_inner_drawer) |         0.5.7+2 |      0.5.7+2 |      7 months ago |        93% |   251 |
 |                  [flutter_sequence_animation](https://pub.dev/packages/flutter_sequence_animation) |           3.0.1 |        3.0.1 |       2 years ago |        94% |   116 |
 |                        [flutter_multi_formatter](https://pub.dev/packages/flutter_multi_formatter) |           1.3.6 |        1.3.6 | about a month ago |        94% |    85 |
@@ -34,6 +33,7 @@
 |                  [syncfusion_flutter_sliders](https://pub.dev/packages/syncfusion_flutter_sliders) |    18.4.47-beta | 18.4.47-beta |        4 days ago |        94% |   108 |
 |                        [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) |         18.4.47 |      18.4.47 |        4 days ago |        98% |    32 |
 |                                    [feature_discovery](https://pub.dev/packages/feature_discovery) |        0.13.0+2 |     0.13.0+2 | about a month ago |        92% |   318 |
+|                            [youtube_player_iframe](https://pub.dev/packages/youtube_player_iframe) |         1.2.0+2 |      1.2.0+2 |      3 months ago |        94% |    96 |
 |                        [flutter_reaction_button](https://pub.dev/packages/flutter_reaction_button) |         1.0.7+3 |      1.0.7+3 | about a month ago |        93% |   106 |
 |                                        [flutter_session](https://pub.dev/packages/flutter_session) |           0.1.1 |        0.1.1 |      8 months ago |        94% |    90 |
 |                              [flutter_styled_toast](https://pub.dev/packages/flutter_styled_toast) |         1.5.2+3 |      1.5.2+3 |       12 days ago |        93% |   108 |
@@ -77,7 +77,7 @@
 |                                            [audio_manager](https://pub.dev/packages/audio_manager) |           0.7.3 |        0.7.3 | about a month ago |        87% |    54 |
 |                                    [password_strength](https://pub.dev/packages/password_strength) |           0.1.3 |        0.1.3 |      3 months ago |        89% |    34 |
 |                                        [skeleton_loader](https://pub.dev/packages/skeleton_loader) |         1.0.2+3 |      1.0.2+3 |        5 days ago |        88% |    45 |
-|                                                    [easy_mask](https://pub.dev/packages/easy_mask) |           1.1.5 |        1.1.5 |      2 months ago |        88% |    42 |
+|                                                    [easy_mask](https://pub.dev/packages/easy_mask) |           1.1.5 |        1.1.5 |      2 months ago |        88% |    43 |
 |                [syncfusion_flutter_barcodes](https://pub.dev/packages/syncfusion_flutter_barcodes) |         18.4.47 |      18.4.47 |        4 days ago |        89% |    32 |
 |                                    [stomp_dart_client](https://pub.dev/packages/stomp_dart_client) |           0.3.8 |        0.3.8 |      3 months ago |        89% |    31 |
 |                                            [sliding_panel](https://pub.dev/packages/sliding_panel) |           1.3.2 |        1.3.2 |      5 months ago |        85% |    79 |
@@ -85,18 +85,18 @@
 |                                              [folding_cell](https://pub.dev/packages/folding_cell) |           1.0.0 |        1.0.0 |      9 months ago |        86% |    53 |
 |                                                        [popover](https://pub.dev/packages/popover) |           0.1.0 |        0.1.0 | about a month ago |        85% |    68 |
 |                                        [shrink_sidemenu](https://pub.dev/packages/shrink_sidemenu) |         1.0.0+3 |      1.0.0+3 |      9 months ago |        86% |    59 |
-|                                                  [after_init](https://pub.dev/packages/after_init) |           0.1.2 |        0.1.2 |  about a year ago |        89% |    26 |
 |                                              [regexpattern](https://pub.dev/packages/regexpattern) |           1.0.0 |        1.0.0 |      7 months ago |        86% |    50 |
+|                                                  [after_init](https://pub.dev/packages/after_init) |           0.1.2 |        0.1.2 |  about a year ago |        89% |    26 |
 |                                              [group_button](https://pub.dev/packages/group_button) |           1.3.0 |        1.3.0 |        9 days ago |        87% |    41 |
 |                                            [hawk_fab_menu](https://pub.dev/packages/hawk_fab_menu) |           0.3.2 |        0.3.2 |      7 months ago |        86% |    54 |
 |                                    [overlay_container](https://pub.dev/packages/overlay_container) |         0.0.4+1 |      0.0.4+1 |  about a year ago |        88% |    29 |
 |                                  [splash_screen_view](https://pub.dev/packages/splash_screen_view) |           1.0.3 |        1.0.3 |      6 months ago |        90% |    20 |
-|                                                  [pluto_grid](https://pub.dev/packages/pluto_grid) |           1.2.0 |        1.2.0 | about an hour ago |        84% |    72 |
+|                                                  [pluto_grid](https://pub.dev/packages/pluto_grid) |           1.2.0 |        1.2.0 |       4 hours ago |        84% |    73 |
 |                [flutter_circle_color_picker](https://pub.dev/packages/flutter_circle_color_picker) |           0.2.0 |        0.2.0 |     10 months ago |        87% |    33 |
-|                                    [json_serializable](https://pub.dev/packages/json_serializable) |           4.0.2 |        4.0.2 |       12 days ago |        99% |   857 |
+|                                    [json_serializable](https://pub.dev/packages/json_serializable) |           4.0.2 |        4.0.2 |       12 days ago |        99% |   859 |
 |                                                          [basics](https://pub.dev/packages/basics) |         0.4.0+1 |      0.4.0+1 |     10 months ago |        85% |    45 |
 |                                              [audioplayers](https://pub.dev/packages/audioplayers) |          0.17.4 |       0.17.4 |       22 days ago |        98% |   703 |
-|                                    [flutter_bootstrap](https://pub.dev/packages/flutter_bootstrap) |           1.0.1 |        1.0.1 |      9 months ago |        84% |    54 |
+|                                    [flutter_bootstrap](https://pub.dev/packages/flutter_bootstrap) |           1.0.1 |        1.0.1 |      9 months ago |        84% |    55 |
 |                          [flutter_spinning_wheel](https://pub.dev/packages/flutter_spinning_wheel) |           1.1.0 |        1.1.0 |  about a year ago |        85% |    47 |
 |                                                              [poly](https://pub.dev/packages/poly) |         1.0.7+2 |      1.0.7+2 |  about a year ago |        90% |    17 |
 |                                      [flutter_dropdown](https://pub.dev/packages/flutter_dropdown) |           0.0.8 |        0.0.8 |      7 months ago |        90% |    18 |

@@ -25,31 +25,35 @@ void main(List<String> arguments) async {
     for (var package in searchResults.packages) {
       if (results.length >= max) break;
 
-      final info = await client.packageInfo(package.package);
-      final metrics = await client.packageMetrics(package.package);
+      try {
+        final info = await client.packageInfo(package.package);
+        final metrics = await client.packageMetrics(package.package);
+        final releaseIsNullSafe = metrics.isNullSafe;
+        final lastReleaseIsNullSafe =
+            info.versions.last.version.contains('nullsafety');
 
-      final releaseIsNullSafe = metrics.isNullSafe;
-      final lastReleaseIsNullSafe =
-          info.versions.last.version.contains('nullsafety');
+        if (releaseIsNullSafe == false && lastReleaseIsNullSafe == false) {
+          header = [
+            'package',
+            'release version',
+            'last version',
+            'last updated',
+            'popularity',
+            'likes',
+          ];
 
-      if (releaseIsNullSafe == false && lastReleaseIsNullSafe == false) {
-        header = [
-          'package',
-          'release version',
-          'last version',
-          'last updated',
-          'popularity',
-          'likes',
-        ];
-
-        results.add([
-          '[${package.package}](${info.url})',
-          metrics.scorecard.packageVersion,
-          info.versions.last.version,
-          timeago.format(info.latest.published),
-          metrics.score.popularityScore.formatPercent(),
-          metrics.score.likeCount.toString(),
-        ]);
+          results.add([
+            '[${package.package}](${info.url})',
+            metrics.scorecard.packageVersion,
+            info.versions.last.version,
+            timeago.format(info.latest.published),
+            metrics.score.popularityScore.formatPercent(),
+            metrics.score.likeCount.toString(),
+          ]);
+        }
+      } catch (e) {
+        print(e);
+        continue;
       }
     }
 
@@ -80,7 +84,7 @@ void main(List<String> arguments) async {
     await file.create(recursive: true);
     await file.writeAsString([
       '# Secret Null Safe Santa 🎅',
-      '## ${results.length} popular unsafe packages',
+      '## ${results.length} popular unsafe [Dart](https://dart.dev) packages',
       '#### Updated ${DateTime.now().formatPretty()}',
       '',
       markdownTable,
