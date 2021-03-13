@@ -1,4 +1,14 @@
 # Secret Null Safe Santa 🎅
+
+This repo is updated daily and contains a list of popular packages that have not migrated to null-safety. [@filiphracek](https://twitter.com/filiphracek/status/1370634483746021382) has an internal tracker whose results are published [here](https://github.com/dart-lang/sdk/wiki/Null-safety-migration-status).
+
+The Dart ecosystem is currently migrating to null-safety. This is a monumental task and there are still some critical packages that have not been migrated. See this [Dart migration guide](https://dart.dev/null-safety/migration-guide) and this [Flutter null-safety guide](https://flutter.dev/docs/null-safety)
+
+Community members, please help migrate these packages to null-safety.
+
+Package maintainers, please make yourself available to triage this work.
+
+
 ## 100 popular [Dart](https://dart.dev) packages without null-safety
 #### Updated March 13, 2021
 
@@ -34,8 +44,8 @@
 |                        [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) |         18.4.47 |      18.4.47 |        4 days ago |        98% |    32 |
 |                                    [feature_discovery](https://pub.dev/packages/feature_discovery) |        0.13.0+2 |     0.13.0+2 | about a month ago |        92% |   318 |
 |                            [youtube_player_iframe](https://pub.dev/packages/youtube_player_iframe) |         1.2.0+2 |      1.2.0+2 |      3 months ago |        94% |    96 |
-|                                        [flutter_session](https://pub.dev/packages/flutter_session) |           0.1.1 |        0.1.1 |      8 months ago |        94% |    90 |
 |                        [flutter_reaction_button](https://pub.dev/packages/flutter_reaction_button) |         1.0.7+3 |      1.0.7+3 | about a month ago |        93% |   106 |
+|                                        [flutter_session](https://pub.dev/packages/flutter_session) |           0.1.1 |        0.1.1 |      8 months ago |        94% |    90 |
 |                              [flutter_styled_toast](https://pub.dev/packages/flutter_styled_toast) |         1.5.2+3 |      1.5.2+3 |       12 days ago |        93% |   108 |
 |                                          [expansion_card](https://pub.dev/packages/expansion_card) |           0.1.0 |        0.1.0 |  about a year ago |        92% |   173 |
 |                                      [intl_phone_field](https://pub.dev/packages/intl_phone_field) |           1.4.4 |        1.4.4 |       24 days ago |        94% |    61 |

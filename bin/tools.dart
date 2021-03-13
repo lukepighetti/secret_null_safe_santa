@@ -77,19 +77,18 @@ void main(List<String> arguments) async {
 
   /// Save table
   final markdownTable = table.wrapLinesWithPipes();
-  final historyFile = File('history/${DateTime.now().formatSimple()}.md');
+  final markdownHeader = await File('header.md').readAsString();
   final latestFile = File('README.md');
 
-  for (var file in [historyFile, latestFile]) {
-    await file.create(recursive: true);
-    await file.writeAsString([
-      '# Secret Null Safe Santa 🎅',
-      '## ${results.length} popular [Dart](https://dart.dev) packages without null-safety',
-      '#### Updated ${DateTime.now().formatPretty()}',
-      '',
-      markdownTable,
-    ].join('\n'));
-  }
+  await latestFile.create(recursive: true);
+  await latestFile.writeAsString([
+    markdownHeader,
+    '',
+    '## ${results.length} popular [Dart](https://dart.dev) packages without null-safety',
+    '#### Updated ${DateTime.now().formatPretty()}',
+    '',
+    markdownTable,
+  ].join('\n'));
 }
 
 enum NullSafety { release, prerelease, none }
