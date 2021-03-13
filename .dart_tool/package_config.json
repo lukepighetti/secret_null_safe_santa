@@ -26,12 +26,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "csv",
-      "rootUri": "file:///Users/lukepighetti/.pub-cache/hosted/pub.dartlang.org/csv-4.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
       "name": "freezed_annotation",
       "rootUri": "file:///Users/lukepighetti/.pub-cache/hosted/pub.dartlang.org/freezed_annotation-0.12.0",
       "packageUri": "lib/",
@@ -140,7 +134,7 @@
       "languageVersion": "2.10"
     }
   ],
-  "generated": "2021-03-13T00:23:58.577911Z",
+  "generated": "2021-03-13T01:21:43.984880Z",
   "generator": "pub",
   "generatorVersion": "2.13.0-77.0.dev"
 }

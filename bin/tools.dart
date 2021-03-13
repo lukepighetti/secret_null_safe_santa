@@ -7,7 +7,7 @@ import 'package:tabulate/tabulate.dart';
 void main(List<String> arguments) async {
   final stopwatch = Stopwatch()..start();
 
-  const max = 5;
+  const max = 100;
   var page = 1;
 
   final client = PubClient();
@@ -76,7 +76,7 @@ void main(List<String> arguments) async {
   final markdownFile = File('latest-packages.md');
   await markdownFile.create(recursive: true);
   await markdownFile.writeAsString([
-    '# Latest Unsafe Dart Packages',
+    '# ${results.length} Popular Unsafe Dart Packages',
     '### Updated ${DateTime.now().formatPretty()}',
     '',
     markdownTable,
