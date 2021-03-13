@@ -76,7 +76,7 @@ void main(List<String> arguments) async {
   for (var file in [historyFile, latestFile]) {
     await file.create(recursive: true);
     await file.writeAsString([
-      '# Secret Null Safe Santa',
+      '# Secret Null Safe Santa 🎅',
       '## ${results.length} popular packages',
       '#### Updated ${DateTime.now().formatPretty()}',
       '',
