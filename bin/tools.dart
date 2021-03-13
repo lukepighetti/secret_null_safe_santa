@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:csv/csv.dart';
 import 'package:intl/intl.dart';
 import 'package:pub_api_client/pub_api_client.dart';
 import 'package:tabulate/tabulate.dart';
@@ -8,7 +7,7 @@ import 'package:tabulate/tabulate.dart';
 void main(List<String> arguments) async {
   final stopwatch = Stopwatch()..start();
 
-  const max = 100;
+  const max = 5;
   var page = 1;
 
   final client = PubClient();
@@ -37,16 +36,14 @@ void main(List<String> arguments) async {
           'last version',
           'popularity',
           'likes',
-          'url'
         ];
 
         results.add([
-          package.package,
+          '[${package.package}](${info.url})',
           metrics.scorecard.packageVersion,
           info.versions.last.version,
           metrics.score.popularityScore.formatPercent(),
           metrics.score.likeCount.toString(),
-          info.url,
         ]);
       }
     }
@@ -65,21 +62,25 @@ void main(List<String> arguments) async {
       'in ${stopwatch.elapsed.formatSimple()}'
       '\n');
 
-  /// Save CSV
-  final csv = ListToCsvConverter().convert([header, ...results]);
-  final csvFile = File('results/csv/${DateTime.now().formatSimple()}.csv');
-  await csvFile.create(recursive: true);
-  await csvFile.writeAsString(csv);
-
   /// Print table
   final table = tabulate(results, header);
   print(table);
 
   /// Save table
-  final markdownTable = table.split('\n').map((e) => '|$e|').join('\n');
-  final tableFile = File('results/table/${DateTime.now().formatSimple()}.md');
+  final markdownTable = table.wrapLinesWithPipes();
+  final tableFile = File('results/${DateTime.now().formatSimple()}.md');
   await tableFile.create(recursive: true);
   await tableFile.writeAsString(markdownTable);
+
+  /// Save latest
+  final markdownFile = File('latest-packages.md');
+  await markdownFile.create(recursive: true);
+  await markdownFile.writeAsString([
+    '# Latest Unsafe Dart Packages',
+    '### Updated ${DateTime.now().formatPretty()}',
+    '',
+    markdownTable,
+  ].join('\n'));
 }
 
 enum NullSafety { release, prerelease, none }
@@ -100,4 +101,12 @@ extension on Duration {
 
 extension on DateTime {
   String formatSimple() => DateFormat('yyyy-MM-dd').format(this);
+  String formatPretty() => DateFormat(DateFormat.YEAR_MONTH_DAY).format(this);
+}
+
+extension on String {
+  String wrapLinesWithPipes() => [
+        for (var e in split('\n'))
+          if (e.trim().isEmpty == false) '|$e|'
+      ].join('\n');
 }
