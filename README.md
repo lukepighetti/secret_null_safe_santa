@@ -1,4 +1,3 @@
-A simple command-line application.
+A command line tool for getting the latest blocking unsafe packages
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+See results in markdown format [here](https://github.com/lukepighetti/secret_null_safe_santa/tree/master/results/table)
