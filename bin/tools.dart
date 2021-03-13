@@ -84,7 +84,7 @@ void main(List<String> arguments) async {
     await file.create(recursive: true);
     await file.writeAsString([
       '# Secret Null Safe Santa 🎅',
-      '## ${results.length} popular unsafe [Dart](https://dart.dev) packages',
+      '## ${results.length} popular [Dart](https://dart.dev) packages without null-safety',
       '#### Updated ${DateTime.now().formatPretty()}',
       '',
       markdownTable,
