@@ -16,6 +16,7 @@ void main(List<String> arguments) async {
   var header = <String>[];
 
   final results = <List<String>>[];
+  final packageNameResults = <String>[];
 
   Future<void> recurse() async {
     if (results.length >= max) return;
@@ -50,6 +51,8 @@ void main(List<String> arguments) async {
             metrics.score.popularityScore.formatPercent(),
             metrics.score.likeCount.toString(),
           ]);
+
+          packageNameResults.add(package.package);
         }
       } catch (e) {
         print(e);
@@ -71,9 +74,22 @@ void main(List<String> arguments) async {
       'in ${stopwatch.elapsed.formatSimple()}'
       '\n');
 
-  /// Print table
+  /// Print tweet
+  final numberToInclude = 8;
+  print([
+    '-----------------------',
+    '${DateTime.now().formatPretty()} #Flutter #Dart null safety update.',
+    'Top $numberToInclude packages that still need to be migrated:',
+    '',
+    for (var e in packageNameResults.sublist(0, numberToInclude)) e,
+    '',
+    'https://github.com/lukepighetti/secret_null_safe_santa',
+    '-----------------------',
+  ].join('\n'));
+
+  /// Create table
   final table = tabulate(results, header);
-  print(table);
+  // print(table);
 
   /// Save table
   final markdownTable = table.wrapLinesWithPipes();

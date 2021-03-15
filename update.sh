@@ -1,7 +1,4 @@
-git add .
-git stash
 dart bin/tools.dart
-git add .
+git add *.md
 git commit -m 'update'
 git push
-git stash pop
