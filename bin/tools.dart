@@ -120,7 +120,7 @@ extension on num {
 }
 
 extension on Duration {
-  String formatSimple() => '$inMinutes:$inSeconds';
+  String formatSimple() => '$inSeconds\s';
 }
 
 extension on DateTime {
